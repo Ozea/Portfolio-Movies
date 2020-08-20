@@ -7,7 +7,7 @@ printCard = (element, item) => {
         <div class="description">${item.overview.length > 140 ? item.overview.slice(0, 170) : item.overview}...</div>
         <div class="footer">
           <div class="votes">
-            ${item.vote_average}%
+            ${item.vote_average}*
           </div>
           <span class="favorite">
             <span>Watch later</span>
