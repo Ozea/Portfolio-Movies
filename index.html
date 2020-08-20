@@ -9,14 +9,160 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/browse.css">
 </head>
 
 <body>
-  <div class="overlay"></div>
-  <h1>Movies application ( Portfolio )</h1>
-  <h3>Coming Soon</h3>
-  <span><b>By <i>Ozea</i></b></span>
+  <div class="sidebar-wrapper">
+    <div class="sidebar">
+      <div class="menu-wrapper">
+        <div class="logo">VIPCINEMA</div>
+        <ul class="first">
+          <li class="home">
+            <a href="index.html">
+              <i class="fas fa-home"></i>
+              Home
+            </a>
+          </li>
+          <hr>
+          <li class="browse">
+            <a class="active" href="#">
+              <i class="fas fa-search"></i>
+              Browse
+            </a>
+          </li>
+          <li class="movies">
+            <a href="#">
+              <i class="fas fa-film"></i>
+              Movies
+            </a>
+          </li>
+          <li class="series">
+            <a href="#">
+              <i class="fas fa-tv"></i>
+              Series
+            </a>
+          </li>
+          <li class="genres">
+            <a href="#">
+              <i class="fas fa-theater-masks"></i>
+              Genres
+            </a>
+          </li>
+          <li class="top">
+            <a href="#">
+              <i class="fas fa-thumbs-up"></i>
+              Top
+            </a>
+          </li>
+          <hr>
+          <li class="browse">
+            <a href="#">
+              <i class="fas fa-bookmark"></i>
+              My Playlist
+            </a>
+          </li>
+          <li class="movies">
+            <a href="#">
+              <i class="fas fa-heart"></i>
+              Favorites
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="profile-wrapper">
+        <ul class="second">
+          <li class="browse">
+            <a href="#">
+              <i class="fas fa-cogs"></i>
+              Settings
+            </a>
+          </li>
+          <li class="movies">
+            <a href="#">
+              <i class="fas fa-user"></i>
+              Username
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
+  <div class="content">
+    <nav class="navbar">
+      <span class="squeeze-sidebar">
+        <i class="fas fa-long-arrow-alt-left"></i>
+      </span>
+      <input type="search" placeholder="Search: Interstellar, Avengers, Iron Man etc...">
+      <div class="actions">
+        <a href="#" class="bell">
+          <i class="fas fa-bell"></i>
+        </a>
+        <span class="divider"></span>
+        <a href="#" class="sign-out">
+          Sign out
+          <i class="fas fa-sign-out-alt"></i>
+        </a>
+      </div>
+    </nav>
+    <div class="content-wrapper">
+      <div class="keywords-wrapper">
+        <div class="keywords">
+          <span>Avatar</span>
+          <span>Avengers: Endgame</span>
+          <span>Spider-Man: Far from Home</span>
+          <span>Harry Potter</span>
+          <span>Project Power</span>
+          <span>The Boys</span>
+          <span>Umbrella Academy</span>
+          <span>Game of Thrones</span>
+        </div>
+      </div>
+
+      <div class="cards-wrapper">
+        <div class="title">
+          <span>Trending</span>
+          <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+        <div class="cards" id="trending"></div>
+
+        <div class="title">
+          <span>Action</span>
+          <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+        <div class="cards" id="action"></div>
+
+        <div class="title">
+          <span>Comedy</span>
+          <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+        <div class="cards" id="comedy"></div>
+
+        <div class="title">
+          <span>Drama</span>
+          <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+        <div class="cards" id="drama"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Import axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!-- Import axios -->
+
+  <!-- Components -->
+  <script src="scripts/index.js"></script>
+  <script src="components/Card.js"></script>
+  <script src="components/TrendingMovieCards.js"></script>
+  <script src="components/ActionMovieCards.js"></script>
+  <script src="components/ComedyMovieCards.js"></script>
+  <script src="components/DramaMovieCards.js"></script>
+  <!-- Components -->
+
+  <!-- Bootstrap -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -26,6 +172,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/4e720b23c8.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome Icons -->
 </body>
 
 </html>
