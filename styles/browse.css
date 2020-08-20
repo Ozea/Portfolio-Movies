@@ -256,7 +256,7 @@ body .content .content-wrapper .call-to-action-banner .close i {
 }
 body .content .content-wrapper .keywords-wrapper {
   display: flex;
-  border-top: 1px solid #0e1a30;
+  border-top: 1px solid #051429;
   width: 100%;
   padding: 1.15rem 1.35rem;
   border-width: 0 0 1px 0;
@@ -271,6 +271,7 @@ body .content .content-wrapper .keywords-wrapper .keywords {
   align-items: center;
 }
 body .content .content-wrapper .keywords-wrapper .keywords span {
+  box-shadow: 0px 0px 10px 5px #212e4b;
   padding: 5px 15px;
   border-radius: 10px;
   color: #030b17;
@@ -300,7 +301,14 @@ body .content .content-wrapper .cards-wrapper .title span {
   -webkit-text-fill-color: transparent;
 }
 body .content .content-wrapper .cards-wrapper .title button {
+  width: 125px;
+  padding: 5px 10px;
   font-size: 20px;
+  border-radius: 15px;
+}
+body .content .content-wrapper .cards-wrapper .title button:hover {
+  background: #122035;
+  color: #DDDDDD;
 }
 body .content .content-wrapper .cards-wrapper .title button i {
   margin-left: 10px;
@@ -367,6 +375,7 @@ body .content .content-wrapper .cards-wrapper .cards .card .front-card .footer {
   align-items: flex-end;
 }
 body .content .content-wrapper .cards-wrapper .cards .card .front-card .footer .votes {
+  width: 55px;
   font-size: 16px;
   padding: 12px 8px;
   border-radius: 50%;

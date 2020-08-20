@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+
 $dark-blue: #030b17;
 $white: #FFFFFF;
 $gray: #DDDDDD;
@@ -9,7 +11,6 @@ $content-nav-color: #051429;
 $sidebar-background: #280000;
 $sidebar-background-active: #722e2e;
 $sidebar-background-hover: #7033338a;
-@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
 
 html, body {
   width: 100%;
@@ -307,7 +308,7 @@ body {
 
       .keywords-wrapper {
         display: flex;
-        border-top: 1px solid $dark-border-color;
+        border-top: 1px solid $content-nav-color;
         width: 100%;
         padding: 1.15rem 1.35rem;
         border-width: 0 0 1px 0;
@@ -322,6 +323,7 @@ body {
           align-items: center;
 
           span {
+            box-shadow: 0px 0px 10px 5px #212e4b;
             padding: 5px 15px;
             border-radius: 10px;
             color: $dark-blue;
@@ -356,7 +358,15 @@ body {
           }
 
           button {
+            width: 125px;
+            padding: 5px 10px;
             font-size: 20px;
+            border-radius: 15px;
+
+            &:hover {
+              background: $dark-blue-hover;
+              color: $gray;
+            }
 
             i {
               margin-left: 10px;
@@ -433,6 +443,7 @@ body {
                 align-items: flex-end;
 
                 .votes {
+                  width: 55px;
                   font-size: 16px;
                   padding: 12px 8px;
                   border-radius: 50%;
