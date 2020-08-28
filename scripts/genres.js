@@ -1,26 +1,28 @@
 let GENRES_URL = `${BASE_URL}genre/movie/list?api_key=${token}&language=en-US`;
 let genresElement = document.getElementById('genres');
+const GLOBAL_GENRES = localStorage.getItem("genres");
 
-axios.get(GENRES_URL)
-  .then(result => {
-    const { genres } = result.data;
+if (!GLOBAL_GENRES) {
+  axios.get(GENRES_URL)
+    .then(result => {
+      const { genres } = result.data;
 
-    if (genres) {
-      printGenres(genres);
-    }
-  })
-  .catch(err => console.error(err));
-
-const printGenres = genres => {
-  genresElement.innerHTML = '';
-  genres.map(genre => printGenre(genre));
+      if (genres) {
+        setGenresInLs(genres);
+      }
+    })
+    .catch(err => console.error(err));
 }
 
-const printGenre = genre => {
-  // genresElement.innerHTML += `
-  //   <div class="genre">
-  //     <span class="name">${genre.name}</span>
-  //     <img width="200" height="300" src='${genre.name === 'Action' ? 'media/Action.jpg' : ''}'
-  //   </div>
-  // `;
+const setGenresInLs = genres => {
+  let stringifiedGenresObject = JSON.stringify(genres);
+  localStorage.setItem("genres", stringifiedGenresObject);
+}
+
+const printSmallGenres = genres => {
+  let result = '';
+
+  genres.map(genre => result += `<span onclick="fetchByGenreId(${genre.id})">${genre.name}</span>`);
+
+  return result;
 }

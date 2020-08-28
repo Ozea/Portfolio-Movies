@@ -120,12 +120,20 @@
         </div>
       </div>
 
-      <div class="cards-wrapper">
+      <div id="movie-details"></div>
+
+      <div class="cards-wrapper" id="cards-wrapper">
         <div class="title">
-          <span>Trending</span>
+          <span>Trending Movies</span>
           <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
         </div>
-        <div class="cards" id="trending"></div>
+        <div class="cards" id="trending-movies"></div>
+
+        <div class="title">
+          <span>Trending TV Shows</span>
+          <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+        <div class="cards" id="trending-series"></div>
 
         <div class="title">
           <span>Action</span>
@@ -157,9 +165,13 @@
   <script src="scripts/index.js"></script>
   <script src="components/Card.js"></script>
   <script src="components/TrendingMovieCards.js"></script>
+  <script src="components/TrendingSeriesCards.js"></script>
   <script src="components/ActionMovieCards.js"></script>
   <script src="components/ComedyMovieCards.js"></script>
   <script src="components/DramaMovieCards.js"></script>
+  <script src="components/MovieDetails.js"></script>
+  <script src="scripts/movies.js"></script>
+  <script src="scripts/genres.js"></script>
   <!-- Components -->
 
   <!-- Bootstrap -->

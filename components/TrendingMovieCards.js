@@ -1,16 +1,15 @@
-const IMG_BASE_POSTER_URL = 'https://image.tmdb.org/t/p/w500';
-const TRENDING_ELEMENT = document.getElementById('trending');
+const TRENDING_MOVIES_ELEMENT = document.getElementById('trending-movies');
 
-axios.get(`https://api.themoviedb.org/3/trending/tv/week?api_key=${token}`)
+axios.get(`https://api.themoviedb.org/3/trending/movie/week?api_key=${token}`)
   .then(result => {
     if (result.data.results) {
-      displayTrending(result.data.results);
+      displayTrendingMovies(result.data.results);
     }
   })
   .catch(err => console.error(err));
 
-displayTrending = items => {
-  TRENDING_ELEMENT.innerHTML = '';
+displayTrendingMovies = items => {
+  TRENDING_MOVIES_ELEMENT.innerHTML = '';
   let slicedItems = items.slice(0, 6);
-  slicedItems.map(item => printCard(TRENDING_ELEMENT, item));
+  slicedItems.map(item => printCard(TRENDING_MOVIES_ELEMENT, item));
 }
