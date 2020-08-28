@@ -2,9 +2,9 @@ printCard = (element, item) => {
   element.innerHTML += `
     <div class="card">
       <img src="${IMG_BASE_POSTER_URL + item.poster_path}" alt="${item.name}">
-      <div class="front-card">
+      <div class="front-card" onclick="displayMovieDetails(this)">
         <div class="card-title">${item.name || item.original_title}</div>
-        <div class="description">${item.overview.length > 140 ? item.overview.slice(0, 170) : item.overview}...</div>
+        <div class="description">${item.overview.length > 125 ? item.overview.slice(0, 130) + '...' : item.overview}</div>
         <div class="footer">
           <div class="votes">
             ${item.vote_average}*
@@ -18,6 +18,7 @@ printCard = (element, item) => {
           </span>
         </div>
       </div>
+      <input type="hidden" value="${item.id}" />
     </div>
   `;
 }
