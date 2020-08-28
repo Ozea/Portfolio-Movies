@@ -489,7 +489,8 @@ body {
         }
       }
 
-      #movie-details {
+      #movie-details,
+      #tv-show-details {
         display: flex;
         align-items: center;
         width: 100%;
@@ -582,7 +583,7 @@ body {
                 margin: .75rem 0;
 
                 .runtime {
-                  margin-bottom: .75rem;
+                  margin-bottom: .15rem;
                   margin-right: 2.5rem;
                 }
 
@@ -602,11 +603,13 @@ body {
 
               .genres {
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
-                padding: 1.25rem 0;
+                padding: .5rem 0;
                 margin-bottom: .5rem;
 
                 span {
+                  margin: 5px 0;
                   margin-right: 15px;
                   cursor: pointer;
                   font-size: 18px;
@@ -658,6 +661,15 @@ body {
         
         }
 
+      }
+
+      #tv-show-details {
+        .title {
+          span.status {
+            font-size: 20px;
+            vertical-align: middle;
+          }
+        }
       }
     }
   }

@@ -1,17 +1,9 @@
-const MOVIE_DETAILS_COMPONENT = document.getElementById("movie-details");
-const CARDS_WRAPPER_COMPONENT = document.getElementById("cards-wrapper");
-
 const displayMovieDetails = element => {
   let id = element.nextSibling.nextSibling.value;
   CARDS_WRAPPER_COMPONENT.style.display = 'none';
+  TV_SHOW_DETAILS_COMPONENT.style.display = 'none';
   MOVIE_DETAILS_COMPONENT.style.display = 'flex';
   getMovieById(id);
-}
-
-const displayInitialBrowsePage = () => {
-  CARDS_WRAPPER_COMPONENT.style.display = 'block';
-  MOVIE_DETAILS_COMPONENT.style.display = 'none';
-  MOVIE_DETAILS_COMPONENT.innerHTML = '';
 }
 
 const getMovieById = id => {
@@ -20,7 +12,6 @@ const getMovieById = id => {
   axios.get(MOVIE_BY_ID_URL)
     .then(result => {
       if (result.data) {
-        console.log(result.data);
         printMovieDetails(result.data);
       }
     })
