@@ -407,7 +407,8 @@ body .content .content-wrapper .cards-wrapper .cards .card .front-card .footer .
 body .content .content-wrapper .cards-wrapper .cards .card span {
   font-size: 20px;
 }
-body .content .content-wrapper #movie-details {
+body .content .content-wrapper #movie-details,
+body .content .content-wrapper #tv-show-details {
   display: flex;
   align-items: center;
   width: 100%;
@@ -415,14 +416,16 @@ body .content .content-wrapper #movie-details {
   background: #030b17;
   position: relative;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper {
+body .content .content-wrapper #movie-details .movie-details-wrapper,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper {
   width: 100%;
   height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .overlay {
+body .content .content-wrapper #movie-details .movie-details-wrapper .overlay,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .overlay {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -431,7 +434,8 @@ body .content .content-wrapper #movie-details .movie-details-wrapper .overlay {
   left: 0;
   background: #030b1757;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .back-to-browse {
+body .content .content-wrapper #movie-details .movie-details-wrapper .back-to-browse,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .back-to-browse {
   cursor: pointer;
   position: absolute;
   z-index: 3;
@@ -442,10 +446,12 @@ body .content .content-wrapper #movie-details .movie-details-wrapper .back-to-br
   color: #FFFFFF;
   border-radius: 15px;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .back-to-browse:hover {
+body .content .content-wrapper #movie-details .movie-details-wrapper .back-to-browse:hover,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .back-to-browse:hover {
   background: #2c3e68;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
@@ -455,10 +461,13 @@ body .content .content-wrapper #movie-details .movie-details-wrapper .details-wr
   padding-top: 35px;
 }
 body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .poster,
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .poster,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details {
   z-index: 3;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .poster {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .poster,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .poster {
   display: flex;
   width: 500px;
   height: 650px;
@@ -466,7 +475,8 @@ body .content .content-wrapper #movie-details .movie-details-wrapper .details-wr
   background-repeat: no-repeat;
   background-size: contain;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details {
   display: flex;
   flex-direction: column;
   color: #FFFFFF;
@@ -479,40 +489,51 @@ body .content .content-wrapper #movie-details .movie-details-wrapper .details-wr
   box-shadow: 0px 0px 10px 1px #1d1d1d;
   overflow: scroll;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .date {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .date,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .date {
   font-size: 25px;
   margin-bottom: 1rem;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .title {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .title,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .title {
   line-height: 50px;
   margin-bottom: 15px;
   font-size: 60px;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper {
   display: flex;
   margin: 0.75rem 0;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper .runtime {
-  margin-bottom: 0.75rem;
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper .runtime,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper .runtime {
+  margin-bottom: 0.15rem;
   margin-right: 2.5rem;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper .votes-wrapper {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper .votes-wrapper,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper .votes-wrapper {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper .votes-wrapper .average {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper .votes-wrapper .average,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper .votes-wrapper .average {
   margin-bottom: 0.5rem;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper .votes-wrapper .average i {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper .votes-wrapper .average i,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper .votes-wrapper .average i {
   margin-left: 10px;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .genres {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .genres,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .genres {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 1.25rem 0;
+  padding: 0.5rem 0;
   margin-bottom: 0.5rem;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .genres span {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .genres span,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .genres span {
+  margin: 5px 0;
   margin-right: 15px;
   cursor: pointer;
   font-size: 18px;
@@ -520,15 +541,18 @@ body .content .content-wrapper #movie-details .movie-details-wrapper .details-wr
   padding: 10px 15px;
   background: #122035;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .genres span:hover {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .genres span:hover,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .genres span:hover {
   background: #2c3e68;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .description {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .description,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .description {
   font-size: 20px;
   width: 85%;
   margin-bottom: 2.5rem;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .tagline {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .tagline,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .tagline {
   background: #122035d3;
   border-radius: 10px;
   font-size: 21px;
@@ -537,18 +561,25 @@ body .content .content-wrapper #movie-details .movie-details-wrapper .details-wr
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .footer .watch-trailer {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .footer .watch-trailer,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .footer .watch-trailer {
   cursor: pointer;
   font-size: 19px;
   padding: 8px 18px;
   border-radius: 10px;
   background: #122035;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .footer .watch-trailer i {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .footer .watch-trailer i,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .footer .watch-trailer i {
   margin-right: 10px;
 }
-body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .footer .watch-trailer:hover {
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .footer .watch-trailer:hover,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .footer .watch-trailer:hover {
   background: #2c3e68;
+}
+body .content .content-wrapper #tv-show-details .title span.status {
+  font-size: 20px;
+  vertical-align: middle;
 }
 
 /*# sourceMappingURL=browse.css.map */

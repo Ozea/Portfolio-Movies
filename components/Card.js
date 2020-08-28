@@ -2,7 +2,7 @@ printCard = (element, item) => {
   element.innerHTML += `
     <div class="card">
       <img src="${IMG_BASE_POSTER_URL + item.poster_path}" alt="${item.name}">
-      <div class="front-card" onclick="displayMovieDetails(this)">
+      <div class="front-card" onclick="${setOnClickEvent(item.media_type)}">
         <div class="card-title">${item.name || item.original_title}</div>
         <div class="description">${item.overview.length > 125 ? item.overview.slice(0, 130) + '...' : item.overview}</div>
         <div class="footer">
@@ -21,6 +21,18 @@ printCard = (element, item) => {
       <input type="hidden" value="${item.id}" />
     </div>
   `;
+}
+
+setOnClickEvent = type => {
+  if (type) {
+    if (type === 'movie') {
+      return 'displayMovieDetails(this)';
+    } else {
+      return 'displayTvShowDetails(this)';
+    }
+  } else {
+    return 'displayMovieDetails(this)';
+  }
 }
 
 printStars = votes => {
