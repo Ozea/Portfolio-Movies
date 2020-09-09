@@ -13,59 +13,60 @@
 </head>
 
 <body>
-  <div class="sidebar-wrapper">
+  <div class="sidebar-wrapper" id="sidebar">
     <div class="sidebar">
       <div class="menu-wrapper">
         <div class="logo">VIPCINEMA</div>
+        <div class="logo-mobile">LOGO</div>
         <ul class="first">
           <li class="home">
             <a href="index.html">
               <i class="fas fa-home"></i>
-              Home
+              <span>Home</span>
             </a>
           </li>
           <hr>
           <li class="browse">
             <a class="active" href="#">
               <i class="fas fa-search"></i>
-              Browse
+              <span>Browse</span>
             </a>
           </li>
           <li class="movies">
             <a href="#">
               <i class="fas fa-film"></i>
-              Movies
+              <span>Movies</span>
             </a>
           </li>
           <li class="series">
             <a href="#">
               <i class="fas fa-tv"></i>
-              Series
+              <span>Series</span>
             </a>
           </li>
           <li class="genres">
             <a href="#">
               <i class="fas fa-theater-masks"></i>
-              Genres
+              <span>Genres</span>
             </a>
           </li>
           <li class="top">
             <a href="#">
               <i class="fas fa-thumbs-up"></i>
-              Top
+              <span>Top</span>
             </a>
           </li>
           <hr>
           <li class="browse">
             <a href="#">
               <i class="fas fa-bookmark"></i>
-              My Playlist
+              <span>My Playlist</span>
             </a>
           </li>
           <li class="movies">
             <a href="#">
               <i class="fas fa-heart"></i>
-              Favorites
+              <span>Favorites</span>
             </a>
           </li>
         </ul>
@@ -75,13 +76,13 @@
           <li class="browse">
             <a href="#">
               <i class="fas fa-cogs"></i>
-              Settings
+              <span>Settings</span>
             </a>
           </li>
           <li class="movies">
             <a href="#">
               <i class="fas fa-user"></i>
-              Username
+              <span>Username</span>
             </a>
           </li>
         </ul>
@@ -91,8 +92,8 @@
 
   <div class="content">
     <nav class="navbar">
-      <span class="squeeze-sidebar">
-        <i class="fas fa-long-arrow-alt-left"></i>
+      <span class="squeeze-sidebar" onclick="squeezeSidebar()">
+        <i class="fa fa-bars"></i>
       </span>
       <input type="search" placeholder="Search: Interstellar, Avengers, Iron Man etc...">
       <div class="actions">

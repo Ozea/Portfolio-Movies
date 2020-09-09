@@ -4,5 +4,47 @@ body #genres {
   align-items: center;
   justify-content: center;
 }
+body #sidebar .logo-mobile {
+  display: none;
+}
+body #sidebar .logo {
+  display: block;
+}
+body #sidebar.squeezed {
+  width: 60px;
+}
+body #sidebar.squeezed .logo {
+  display: none;
+}
+body #sidebar.squeezed .logo-mobile {
+  display: block;
+  color: #D5AD6D;
+  background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, #d5ad6d 0%, #d5ad6d 26%, #e2ba78 35%, #a37e43 45%, #91703b 61%, #d5ad6d 100%);
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 27px 10px 34px;
+  font-size: 16px;
+  font-family: "Signika", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+}
+body #sidebar.squeezed li a {
+  justify-content: center;
+}
+body #sidebar.squeezed li a i {
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+  padding-left: 15px;
+}
+body #sidebar.squeezed li a span {
+  display: none;
+}
+body #sidebar.squeezed + .content {
+  margin-left: 60px;
+}
+body #sidebar.squeezed + .content nav {
+  width: calc(100% - 60px);
+}
 
 /*# sourceMappingURL=styles.css.map */
