@@ -189,10 +189,14 @@ body {
         }
       }
 
-      > input {
+      form {
+        width: 65%;
+      }
+
+      input {
         border-radius: 4px 4px 0 0;
         margin: 5px 1.75rem 0;
-        width: 65%;
+        width: 100%;
         padding: .5rem 1rem;
         background: none;
         border-width: 0 0 1px 0;
@@ -267,7 +271,6 @@ body {
     .content-wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
       margin-top: 75px;
       height: calc(100% - 75px);
@@ -373,6 +376,17 @@ body {
             i {
               margin-left: 10px;
             }
+          }
+        }
+
+        #search-results {
+          flex-wrap: wrap;
+          padding: 0;
+
+          .card {
+            flex: none;
+            width: 330px;
+            margin: 1rem;
           }
         }
 

@@ -154,10 +154,13 @@ body .content nav .squeeze-sidebar {
 body .content nav .squeeze-sidebar:hover {
   background: #122035;
 }
-body .content nav > input {
+body .content nav form {
+  width: 65%;
+}
+body .content nav input {
   border-radius: 4px 4px 0 0;
   margin: 5px 1.75rem 0;
-  width: 65%;
+  width: 100%;
   padding: 0.5rem 1rem;
   background: none;
   border-width: 0 0 1px 0;
@@ -166,11 +169,11 @@ body .content nav > input {
   color: #FFFFFF;
   outline: none;
 }
-body .content nav > input:hover {
+body .content nav input:hover {
   background: #122035;
   border-width: 0 0 2px 0;
 }
-body .content nav > input:active, body .content nav > input:focus {
+body .content nav input:active, body .content nav input:focus {
   border-width: 0 0 2px 0;
 }
 body .content nav .actions {
@@ -219,7 +222,6 @@ body .content nav .actions a.sign-out i {
 body .content .content-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   margin-top: 75px;
   height: calc(100% - 75px);
@@ -313,6 +315,15 @@ body .content .content-wrapper .cards-wrapper .title button:hover {
 }
 body .content .content-wrapper .cards-wrapper .title button i {
   margin-left: 10px;
+}
+body .content .content-wrapper .cards-wrapper #search-results {
+  flex-wrap: wrap;
+  padding: 0;
+}
+body .content .content-wrapper .cards-wrapper #search-results .card {
+  flex: none;
+  width: 330px;
+  margin: 1rem;
 }
 body .content .content-wrapper .cards-wrapper .cards {
   width: 100%;

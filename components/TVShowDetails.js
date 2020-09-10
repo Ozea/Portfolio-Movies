@@ -1,6 +1,7 @@
 const displayTvShowDetails = element => {
   let id = element.nextSibling.nextSibling.value;
-  CARDS_WRAPPER_COMPONENT.style.display = 'none';
+  BROWSE_CARDS_COMPONENT.style.display = 'none';
+  SEARCH_RESULTS_COMPONENT.style.display = 'none';
   MOVIE_DETAILS_COMPONENT.style.display = 'none';
   TV_SHOW_DETAILS_COMPONENT.style.display = 'flex';
   getTvShowById(id);
