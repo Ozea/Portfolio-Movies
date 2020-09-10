@@ -74,6 +74,7 @@ body .sidebar-wrapper .sidebar .menu-wrapper .logo {
   font-family: "Signika", sans-serif;
   font-weight: bold;
   letter-spacing: 2.5px;
+  margin-bottom: 0.35rem;
 }
 body .sidebar-wrapper .sidebar .menu-wrapper hr {
   margin-top: 10px;

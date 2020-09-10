@@ -27,7 +27,7 @@
           </li>
           <hr>
           <li class="browse">
-            <a class="active" href="#">
+            <a class="active" href="index.html">
               <i class="fas fa-search"></i>
               <span>Browse</span>
             </a>
@@ -96,7 +96,7 @@
         <i class="fa fa-bars"></i>
       </span>
       <form>
-        <input type="search" placeholder="Search: Interstellar, Avengers, Iron Man etc...">
+        <input type="search" placeholder="Search: Interstellar, Avengers, Iron Man etc..." id="search-input">
       </form>
       <div class="actions">
         <a href="#" class="bell">
@@ -111,16 +111,7 @@
     </nav>
     <div class="content-wrapper">
       <div class="keywords-wrapper">
-        <div class="keywords">
-          <span>Avatar</span>
-          <span>Avengers: Endgame</span>
-          <span>Spider-Man: Far from Home</span>
-          <span>Harry Potter</span>
-          <span>Project Power</span>
-          <span>The Boys</span>
-          <span>Umbrella Academy</span>
-          <span>Game of Thrones</span>
-        </div>
+        <div class="keywords" id="keywords"></div>
       </div>
 
       <div id="movie-details"></div>
@@ -180,6 +171,7 @@
   <script src="components/DramaMovieCards.js"></script>
   <script src="components/MovieDetails.js"></script>
   <script src="components/TVShowDetails.js"></script>
+  <script src="components/Keywords.js"></script>
   <script src="scripts/movies.js"></script>
   <script src="scripts/genres.js"></script>
   <script src="scripts/search.js"></script>

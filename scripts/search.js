@@ -1,4 +1,5 @@
 const SEARCH_URL = 'search/multi';
+const SEARCH_INPUT = document.getElementById('search-input');
 const FORM_COMPONENT = document.querySelector('nav form');
 
 const search = query => {
@@ -9,7 +10,6 @@ const search = query => {
   MOVIE_DETAILS_COMPONENT.innerHTML = '';
   SEARCH_RESULTS_COMPONENT.style.display = 'flex';
   SEARCH_RESULTS_COMPONENT.innerHTML = '';
-  console.log('searcg');
 
   axios.get(`${BASE_URL}${SEARCH_URL}?api_key=${token}&query=${query}`)
     .then(result => {
@@ -17,6 +17,13 @@ const search = query => {
         renderResults(result.data.results);
       }
     })
+}
+
+const searchByKeyword = word => {
+  if (word) {
+    SEARCH_INPUT.value = word;
+    search(word);
+  }
 }
 
 const renderResults = data => {
