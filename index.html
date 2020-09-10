@@ -95,7 +95,9 @@
       <span class="squeeze-sidebar" onclick="squeezeSidebar()">
         <i class="fa fa-bars"></i>
       </span>
-      <input type="search" placeholder="Search: Interstellar, Avengers, Iron Man etc...">
+      <form>
+        <input type="search" placeholder="Search: Interstellar, Avengers, Iron Man etc...">
+      </form>
       <div class="actions">
         <a href="#" class="bell">
           <i class="fas fa-bell"></i>
@@ -122,38 +124,43 @@
       </div>
 
       <div id="movie-details"></div>
+
       <div id="tv-show-details"></div>
 
       <div class="cards-wrapper" id="cards-wrapper">
-        <div class="title">
-          <span>Trending Movies</span>
-          <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
-        </div>
-        <div class="cards" id="trending-movies"></div>
+        <div class="cards" id="search-results"></div>
 
-        <div class="title">
-          <span>Trending TV Shows</span>
-          <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
-        </div>
-        <div class="cards" id="trending-series"></div>
+        <div class="browse-cards" id="browse-cards">
+          <div class="title">
+            <span>Trending Movies</span>
+            <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+          </div>
+          <div class="cards" id="trending-movies"></div>
 
-        <div class="title">
-          <span>Action</span>
-          <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
-        </div>
-        <div class="cards" id="action"></div>
+          <div class="title">
+            <span>Trending TV Shows</span>
+            <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+          </div>
+          <div class="cards" id="trending-series"></div>
 
-        <div class="title">
-          <span>Comedy</span>
-          <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
-        </div>
-        <div class="cards" id="comedy"></div>
+          <div class="title">
+            <span>Action</span>
+            <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+          </div>
+          <div class="cards" id="action"></div>
 
-        <div class="title">
-          <span>Drama</span>
-          <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+          <div class="title">
+            <span>Comedy</span>
+            <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+          </div>
+          <div class="cards" id="comedy"></div>
+
+          <div class="title">
+            <span>Drama</span>
+            <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+          </div>
+          <div class="cards" id="drama"></div>
         </div>
-        <div class="cards" id="drama"></div>
 
       </div>
     </div>
@@ -175,6 +182,7 @@
   <script src="components/TVShowDetails.js"></script>
   <script src="scripts/movies.js"></script>
   <script src="scripts/genres.js"></script>
+  <script src="scripts/search.js"></script>
   <!-- Components -->
 
   <!-- Bootstrap -->
