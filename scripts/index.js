@@ -23,3 +23,15 @@ const displayInitialBrowsePage = () => {
 const squeezeSidebar = () => {
   SIDEBAR_COMPONENT.classList.toggle("squeezed");
 }
+
+const mobileDeviceHandler = () => {
+  if (screen.width < 800) {
+    SIDEBAR_COMPONENT.classList.toggle("squeezed");
+  }
+}
+
+mobileDeviceHandler();
+
+document.addEventListener("resize", () => {
+  mobileDeviceHandler();
+});

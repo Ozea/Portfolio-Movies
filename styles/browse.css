@@ -78,7 +78,7 @@ body .sidebar-wrapper .sidebar .menu-wrapper .logo {
 }
 body .sidebar-wrapper .sidebar .menu-wrapper hr {
   margin-top: 10px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   width: 75%;
   border-top: 1px solid #FFFFFF;
 }
@@ -295,7 +295,7 @@ body .content .content-wrapper .cards-wrapper .title {
   justify-content: space-between;
   font-size: 35px;
   width: 100%;
-  padding: 1.3rem 1.75rem;
+  padding: 0.5rem 1.5rem;
 }
 body .content .content-wrapper .cards-wrapper .title span {
   color: #D5AD6D;
@@ -324,13 +324,14 @@ body .content .content-wrapper .cards-wrapper #search-results {
 body .content .content-wrapper .cards-wrapper #search-results .card {
   flex: none;
   width: 330px;
+  height: 500px;
   margin: 1rem;
 }
 body .content .content-wrapper .cards-wrapper .cards {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  padding-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
 }
 body .content .content-wrapper .cards-wrapper .cards .card {
   position: relative;
@@ -592,6 +593,258 @@ body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-
 body .content .content-wrapper #tv-show-details .title span.status {
   font-size: 20px;
   vertical-align: middle;
+}
+
+@media screen and (max-width: 1280px) {
+  .keywords-wrapper #keywords span:last-child {
+    display: none;
+  }
+
+  body .content .content-wrapper .cards-wrapper #search-results .card {
+    width: 315px;
+    height: 480px;
+  }
+  body .content .content-wrapper #movie-details .movie-details-wrapper .back-to-browse {
+    left: 10px;
+    top: 10px;
+    border-radius: 10px;
+    padding: 5px 15px;
+  }
+  body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper {
+    align-items: flex-start;
+    padding-top: 3.5rem;
+  }
+  body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details .title {
+    font-size: 40px;
+  }
+  body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .poster {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body .content .content-wrapper .keywords-wrapper #keywords span:nth-child(5),
+body .content .content-wrapper .keywords-wrapper #keywords span:nth-child(7),
+body .content .content-wrapper .keywords-wrapper #keywords span:nth-child(8) {
+    display: none;
+  }
+  body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .poster,
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .poster {
+    display: none;
+  }
+  body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details {
+    width: 100%;
+    margin: 0;
+    width: 75%;
+    height: 65%;
+  }
+  body .content .content-wrapper .cards-wrapper #search-results .card {
+    width: 230px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .content nav input {
+    width: 85%;
+  }
+  body .content .content-wrapper .keywords-wrapper #keywords span:nth-child(1),
+body .content .content-wrapper .keywords-wrapper #keywords span:nth-child(5),
+body .content .content-wrapper .keywords-wrapper #keywords span:nth-child(7),
+body .content .content-wrapper .keywords-wrapper #keywords span:nth-child(8) {
+    display: none;
+  }
+  body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .poster,
+body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .poster {
+    display: none;
+  }
+  body .content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details,
+body .content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details {
+    width: 100%;
+    margin: 0;
+    width: 75%;
+    height: 65%;
+  }
+  body .content .content-wrapper .cards-wrapper #search-results .card {
+    width: 200px;
+    height: 310px;
+  }
+}
+@media screen and (max-width: 375px) {
+  body * {
+    font-size: 12px;
+  }
+  body .sidebar-wrapper .sidebar .menu-wrapper hr {
+    margin-bottom: 6px;
+  }
+  body .sidebar-wrapper .sidebar ul li a i::before {
+    font-size: 18px;
+  }
+  body div.content nav {
+    justify-content: flex-start;
+  }
+  body div.content nav .squeeze-sidebar {
+    display: none;
+  }
+  body div.content nav div.actions a.bell::before {
+    width: 9px;
+    height: 9px;
+  }
+  body div.content nav span + form {
+    width: 54%;
+  }
+  body div.content nav span + form input {
+    padding: 5px 10px;
+    width: 95%;
+    font-size: 16px;
+    margin: 0 5px;
+  }
+  body div.content nav form {
+    width: 36%;
+  }
+  body div.content .content-wrapper .keywords-wrapper {
+    padding: 5px 10px;
+  }
+  body div.content .content-wrapper .keywords-wrapper #keywords span {
+    padding: 5px 10px;
+  }
+  body div.content .content-wrapper .keywords-wrapper #keywords span:nth-child(2),
+body div.content .content-wrapper .keywords-wrapper #keywords span:nth-child(3),
+body div.content .content-wrapper .keywords-wrapper #keywords span:nth-child(5),
+body div.content .content-wrapper .keywords-wrapper #keywords span:nth-child(7),
+body div.content .content-wrapper .keywords-wrapper #keywords span:nth-child(8) {
+    display: none;
+  }
+  body div.content .content-wrapper .keywords-wrapper #keywords span:nth-child(1) {
+    display: flex;
+  }
+  body div.content .content-wrapper #movie-details,
+body div.content .content-wrapper #tv-show-details {
+    display: none;
+  }
+  body div.content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper,
+body div.content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper {
+    padding: 0;
+    align-items: center;
+  }
+  body div.content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .poster,
+body div.content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .poster {
+    display: none;
+  }
+  body div.content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper div.details,
+body div.content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper div.details {
+    padding: 20px;
+    width: 90%;
+    height: 80%;
+  }
+  body div.content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper div.details .date,
+body div.content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper div.details .date {
+    font-size: 18px;
+    margin-bottom: 0.25rem;
+  }
+  body div.content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper div.details .runtime-wrapper .runtime,
+body div.content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper div.details .runtime-wrapper .runtime {
+    margin-right: 1.25rem;
+  }
+  body div.content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper div.details .title,
+body div.content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper div.details .title {
+    font-size: 28px;
+    line-height: 25px;
+  }
+  body div.content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper div.details .tagline,
+body div.content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper div.details .tagline {
+    margin: 5px 0;
+    font-size: 17px;
+  }
+  body div.content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper div.details .genres span,
+body div.content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper div.details .genres span {
+    font-size: 13px;
+  }
+  body div.content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper div.details .description,
+body div.content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper div.details .description {
+    font-size: 12px;
+    width: 95%;
+    margin-bottom: 1.25rem;
+  }
+  body div.content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper div.details .footer span.watch-trailer,
+body div.content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper div.details .footer span.watch-trailer {
+    font-size: 14px;
+  }
+  body div.content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper .votes-wrapper {
+    margin: 0 1rem;
+  }
+  body div.content .content-wrapper #movie-details .movie-details-wrapper .details-wrapper .details,
+body div.content .content-wrapper #tv-show-details .movie-details-wrapper .details-wrapper .details {
+    width: 100%;
+    margin: 0;
+    width: 75%;
+    height: 65%;
+  }
+  body div.content .content-wrapper .cards-wrapper .browse-cards .card .front-card .footer .votes {
+    font-size: 12px;
+    width: 40px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body div.content .content-wrapper .cards-wrapper .browse-cards .card,
+body div.content .content-wrapper .cards-wrapper #search-results div.card {
+    margin: 0.25rem;
+    width: 148px;
+    height: 250px;
+  }
+  body div.content .content-wrapper .cards-wrapper .browse-cards .card *,
+body div.content .content-wrapper .cards-wrapper #search-results div.card * {
+    font-size: 12px;
+  }
+  body div.content .content-wrapper .cards-wrapper .browse-cards .card .front-card .card-title,
+body div.content .content-wrapper .cards-wrapper #search-results div.card .front-card .card-title {
+    font-size: 16px;
+  }
+  body div.content .content-wrapper .cards-wrapper .browse-cards .card .front-card .description,
+body div.content .content-wrapper .cards-wrapper #search-results div.card .front-card .description {
+    font-size: 10px;
+    padding: 8px 0;
+  }
+  body div.content .content-wrapper .cards-wrapper .browse-cards .card .front-card .footer .votes,
+body div.content .content-wrapper .cards-wrapper #search-results div.card .front-card .footer .votes {
+    width: 40px;
+    height: 35px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  body div.content .content-wrapper .cards-wrapper .browse-cards .card .front-card .footer span.favorite,
+body div.content .content-wrapper .cards-wrapper #search-results div.card .front-card .footer span.favorite {
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 0.25rem;
+    padding: 7px;
+  }
+  body div.content .content-wrapper .cards-wrapper .browse-cards .card .front-card .footer span.favorite span,
+body div.content .content-wrapper .cards-wrapper #search-results div.card .front-card .footer span.favorite span {
+    display: none;
+  }
+  body div.content .content-wrapper .cards-wrapper .browse-cards .card .front-card .footer span.favorite svg,
+body div.content .content-wrapper .cards-wrapper #search-results div.card .front-card .footer span.favorite svg {
+    width: 20px;
+    height: 20px;
+  }
+  body div.content .content-wrapper .cards-wrapper .browse-cards > .title span {
+    align-self: center;
+    font-size: 17px;
+  }
+  body div.content .content-wrapper .cards-wrapper .browse-cards > .title > button {
+    padding: 5px;
+    font-size: 17px;
+  }
+  body div.content .content-wrapper .cards-wrapper .browse-cards .cards {
+    flex-wrap: wrap;
+  }
+  body div.content .content-wrapper .cards-wrapper .browse-cards .cards .card {
+    height: 100%;
+    flex: 1 1 33%;
+    margin: 5px;
+  }
 }
 
 /*# sourceMappingURL=browse.css.map */
