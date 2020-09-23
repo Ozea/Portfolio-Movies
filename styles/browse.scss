@@ -94,7 +94,7 @@ body {
 
         hr {
           margin-top: 10px;
-          margin-bottom: 2rem;
+          margin-bottom: 1rem;
           width: 75%;
           border-top: 1px solid $white;
         }
@@ -353,7 +353,7 @@ body {
           justify-content: space-between;
           font-size: 35px;
           width: 100%;
-          padding: 1.3rem 1.75rem;
+          padding: .5rem 1.5rem;
 
           span {
             color: #D5AD6D;
@@ -387,6 +387,7 @@ body {
           .card {
             flex: none;
             width: 330px;
+            height: 500px;
             margin: 1rem;
           }
         }
@@ -395,7 +396,7 @@ body {
           width: 100%;
           display: flex;
           justify-content: space-around;
-          padding-bottom: 1.5rem;
+          padding-bottom: .5rem;
   
           .card {
             position: relative;
@@ -683,6 +684,348 @@ body {
           span.status {
             font-size: 20px;
             vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media query for devices with resolution 1280 x 720
+@media screen and (max-width: 1280px) {
+  .keywords-wrapper {
+    #keywords {
+      span:last-child {
+        display: none;
+      }
+    }
+  }
+
+  body .content .content-wrapper {
+    .cards-wrapper #search-results .card {
+      width: 315px;
+      height: 480px;
+    }
+
+    #movie-details .movie-details-wrapper {
+      .back-to-browse {
+        left: 10px;
+        top: 10px;
+        border-radius: 10px;
+        padding: 5px 15px;
+      }
+      
+      .details-wrapper {
+        align-items: flex-start;
+        padding-top: 3.5rem;
+        
+        .details .title {
+          font-size: 40px;
+        }
+        
+        .poster {
+          height: 500px;
+        }
+      }
+    }
+  }
+}
+
+// Media query for devices with resolution 1024 x 1366
+@media screen and (max-width: 1024px) {
+  body .content .content-wrapper {
+    .keywords-wrapper {
+      #keywords {
+        span:nth-child(5),
+        span:nth-child(7),
+        span:nth-child(8) {
+          display: none;
+        }
+      }
+    }
+
+    #tv-show-details .movie-details-wrapper .details-wrapper .poster,
+    #movie-details .movie-details-wrapper .details-wrapper .poster {
+      display: none;
+    }
+
+    #movie-details .movie-details-wrapper .details-wrapper .details,
+    #tv-show-details .movie-details-wrapper .details-wrapper .details {
+      width: 100%;
+      margin: 0;
+      width: 75%;
+      height: 65%;
+    }
+
+    .cards-wrapper #search-results .card {
+      width: 230px;
+      height: 350px;
+    }
+  }
+}
+
+// Media query for devices with resolution 768 x 1024
+@media screen and (max-width: 768px) {
+  body .content {
+    nav {
+      input {
+        width: 85%;
+      }
+    }
+
+    .content-wrapper {
+      .keywords-wrapper {
+        #keywords {
+          span:nth-child(1),
+          span:nth-child(5),
+          span:nth-child(7),
+          span:nth-child(8) {
+            display: none;
+          }
+        }
+      }
+
+      #tv-show-details .movie-details-wrapper .details-wrapper .poster,
+      #movie-details .movie-details-wrapper .details-wrapper .poster {
+        display: none;
+      }
+  
+      #movie-details .movie-details-wrapper .details-wrapper .details,
+      #tv-show-details .movie-details-wrapper .details-wrapper .details {
+        width: 100%;
+        margin: 0;
+        width: 75%;
+        height: 65%;
+      }
+  
+      .cards-wrapper #search-results .card {
+        width: 200px;
+        height: 310px;
+      }
+    }
+  }
+}
+
+// Media query for devices with resolution 375 x 812
+@media screen and (max-width: 375px) {
+  body {
+    * {
+      font-size: 12px;
+    }
+
+    .sidebar-wrapper .sidebar {
+      .menu-wrapper hr {
+        margin-bottom: 6px;
+      }
+
+      ul li a i::before {
+        font-size: 18px;
+      }
+    }
+
+    div.content {
+      nav {
+        justify-content: flex-start;
+
+        .squeeze-sidebar {
+          display: none;
+        }
+
+        div.actions a.bell::before {
+          width: 9px;
+          height: 9px;
+        }
+
+        span + form {
+          width: 54%;
+
+          input {
+            padding: 5px 10px;
+            width: 95%;
+            font-size: 16px;
+            margin: 0 5px;
+          } 
+        }
+
+        form {
+          width: 36%;
+        }
+      }
+
+      .content-wrapper {
+        .keywords-wrapper {
+          padding: 5px 10px;
+
+          #keywords {
+            span {
+              padding: 5px 10px;
+            }
+
+            span:nth-child(2),
+            span:nth-child(3),
+            span:nth-child(5),
+            span:nth-child(7),
+            span:nth-child(8) {
+              display: none;
+            }
+
+            span:nth-child(1) {
+              display: flex;
+            }
+          }
+        }
+
+        #movie-details,
+        #tv-show-details {
+          display: none;
+        }
+    
+        #tv-show-details .movie-details-wrapper .details-wrapper,
+        #movie-details .movie-details-wrapper .details-wrapper {
+          padding: 0;
+          align-items: center;
+
+          .poster {
+            display: none;
+          }
+
+          div.details {
+            padding: 20px;
+            width: 90%;
+            height: 80%;
+
+            .date {
+              font-size: 18px;
+              margin-bottom: .25rem;
+            }
+
+            .runtime-wrapper .runtime {
+              margin-right: 1.25rem;
+            }
+
+            .title {
+              font-size: 28px;
+              line-height: 25px;
+            }
+
+            .tagline {
+              margin: 5px 0;
+              font-size: 17px;
+            }
+
+            .genres span {
+              font-size: 13px;
+            }
+
+            .description {
+              font-size: 12px;
+              width: 95%;
+              margin-bottom: 1.25rem;
+            }
+
+            .footer span.watch-trailer {
+              font-size: 14px;
+            }
+          }
+        }
+
+        #tv-show-details .movie-details-wrapper .details-wrapper .details .runtime-wrapper .votes-wrapper {
+          margin: 0 1rem;
+        }
+    
+        #movie-details .movie-details-wrapper .details-wrapper .details,
+        #tv-show-details .movie-details-wrapper .details-wrapper .details {
+          width: 100%;
+          margin: 0;
+          width: 75%;
+          height: 65%;
+        }
+    
+        .cards-wrapper {
+          .browse-cards .card {
+            .front-card {
+              .footer {
+                .votes {
+                  font-size: 12px;
+                  width: 40px;
+                  height: 35px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+              }
+            }
+          }
+
+          .browse-cards .card,
+          #search-results div.card {
+            margin: .25rem;
+            width: 148px;
+            height: 250px;
+  
+            * {
+              font-size: 12px;
+            }
+  
+            .front-card {
+              .card-title {
+                font-size: 16px;
+              }
+  
+              .description {
+                font-size: 10px;
+                padding: 8px 0;
+              }
+  
+              .footer {
+                .votes {
+                  width: 40px;
+                  height: 35px;
+                  margin-right: 5px;
+                  margin-bottom: 5px;
+                }
+  
+                span.favorite {
+                  font-size: 12px;
+                  line-height: 15px;
+                  margin-bottom: .25rem;
+                  padding: 7px;
+
+                  span {
+                    display: none;
+                  }
+  
+                  svg {
+                    width: 20px;
+                    height: 20px;
+                  }
+                }
+              }
+            }
+          }
+
+          .browse-cards {
+            > .title {
+              span {
+                align-self: center;
+                font-size: 17px;
+              }
+
+              > button {
+                padding: 5px;
+                font-size: 17px;
+              }
+            }
+
+            .cards {
+              flex-wrap: wrap;
+
+              .card {
+                height: 100%;
+                flex: 1 1 33%;
+                margin: 5px;
+              }
+            }
           }
         }
       }
