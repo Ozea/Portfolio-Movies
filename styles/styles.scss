@@ -1,42 +1,64 @@
 body {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-image: url('https://images.pexels.com/photos/33129/popcorn-movie-party-entertainment.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  .overlay {
-    background: #ffffff3d;
-    height: 100%;
-    width: 100%;
-    position: absolute;
+  #genres {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
   }
 
-  * {
-    z-index: 2;
-    color: #3f0a63;
+  #sidebar {
+    .logo-mobile {
+      display: none;
+    }
+
+    .logo {
+      display: block;
+    }
   }
 
-  h1 {
-    font-size: 75px;
-    letter-spacing: 5px;
-    text-align: center;
-    height: 35%;
-    width: 100%;
-    padding-top: 100px;
-  }
+  #sidebar.squeezed {
+    width: 60px;
 
-  h3 {
-    font-size: 60px;
-  }
+    .logo {
+      display: none;
+    }
 
-  span {
-    font-size: 25px;
-    margin-bottom: 30px;
+    .logo-mobile {
+      display: block;
+      color: #D5AD6D;
+      background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+      background: -o-linear-gradient(transparent, transparent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding: 27px 10px 34px;
+      font-size: 16px;
+      font-family: 'Signika', sans-serif;
+      font-weight: bold;
+      letter-spacing: 2.5px;
+    }
+
+    li {
+      a {
+        justify-content: center;
+
+        i {
+          padding-top: 2.5px;
+          padding-bottom: 2.5px;
+          padding-left: 15px;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    + .content {
+      margin-left: 60px;
+
+      nav {
+        width: calc(100% - 60px);
+      }
+    }
   }
 }

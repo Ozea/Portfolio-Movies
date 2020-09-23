@@ -9,14 +9,175 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/browse.css">
 </head>
 
 <body>
-  <div class="overlay"></div>
-  <h1>Movies application ( Portfolio )</h1>
-  <h3>Coming Soon</h3>
-  <span><b>By <i>Ozea</i></b></span>
+  <div class="sidebar-wrapper" id="sidebar">
+    <div class="sidebar">
+      <div class="menu-wrapper">
+        <div class="logo">VIPCINEMA</div>
+        <div class="logo-mobile">LOGO</div>
+        <ul class="first">
+          <li class="home">
+            <a href="index.html">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <hr>
+          <li class="browse">
+            <a class="active" href="index.html">
+              <i class="fas fa-search"></i>
+              <span>Browse</span>
+            </a>
+          </li>
+          <li class="movies">
+            <a href="#">
+              <i class="fas fa-film"></i>
+              <span>Movies</span>
+            </a>
+          </li>
+          <li class="series">
+            <a href="#">
+              <i class="fas fa-tv"></i>
+              <span>Series</span>
+            </a>
+          </li>
+          <li class="genres">
+            <a href="#">
+              <i class="fas fa-theater-masks"></i>
+              <span>Genres</span>
+            </a>
+          </li>
+          <li class="top">
+            <a href="#">
+              <i class="fas fa-thumbs-up"></i>
+              <span>Top</span>
+            </a>
+          </li>
+          <hr>
+          <li class="browse">
+            <a href="#">
+              <i class="fas fa-bookmark"></i>
+              <span>My Playlist</span>
+            </a>
+          </li>
+          <li class="movies">
+            <a href="#">
+              <i class="fas fa-heart"></i>
+              <span>Favorites</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="profile-wrapper">
+        <ul class="second">
+          <li class="browse">
+            <a href="#">
+              <i class="fas fa-cogs"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li class="movies">
+            <a href="#">
+              <i class="fas fa-user"></i>
+              <span>Username</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
+  <div class="content">
+    <nav class="navbar">
+      <span class="squeeze-sidebar" onclick="squeezeSidebar()">
+        <i class="fa fa-bars"></i>
+      </span>
+      <form>
+        <input type="search" placeholder="Search: Interstellar, Avengers, Iron Man etc..." id="search-input">
+      </form>
+      <div class="actions">
+        <a href="#" class="bell">
+          <i class="fas fa-bell"></i>
+        </a>
+        <span class="divider"></span>
+        <a href="#" class="sign-out">
+          Sign out
+          <i class="fas fa-sign-out-alt"></i>
+        </a>
+      </div>
+    </nav>
+    <div class="content-wrapper">
+      <div class="keywords-wrapper">
+        <div class="keywords" id="keywords"></div>
+      </div>
+
+      <div id="movie-details"></div>
+
+      <div id="tv-show-details"></div>
+
+      <div class="cards-wrapper" id="cards-wrapper">
+        <div class="cards" id="search-results"></div>
+
+        <div class="browse-cards" id="browse-cards">
+          <div class="title">
+            <span>Trending Movies</span>
+            <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+          </div>
+          <div class="cards" id="trending-movies"></div>
+
+          <div class="title">
+            <span>Trending TV Shows</span>
+            <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+          </div>
+          <div class="cards" id="trending-series"></div>
+
+          <div class="title">
+            <span>Action</span>
+            <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+          </div>
+          <div class="cards" id="action"></div>
+
+          <div class="title">
+            <span>Comedy</span>
+            <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+          </div>
+          <div class="cards" id="comedy"></div>
+
+          <div class="title">
+            <span>Drama</span>
+            <button>See All <i class="fas fa-long-arrow-alt-right"></i></button>
+          </div>
+          <div class="cards" id="drama"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Import axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!-- Import axios -->
+
+  <!-- Components -->
+  <script src="scripts/index.js"></script>
+  <script src="components/Card.js"></script>
+  <script src="components/TrendingMovieCards.js"></script>
+  <script src="components/TrendingSeriesCards.js"></script>
+  <script src="components/ActionMovieCards.js"></script>
+  <script src="components/ComedyMovieCards.js"></script>
+  <script src="components/DramaMovieCards.js"></script>
+  <script src="components/MovieDetails.js"></script>
+  <script src="components/TVShowDetails.js"></script>
+  <script src="components/Keywords.js"></script>
+  <script src="scripts/movies.js"></script>
+  <script src="scripts/genres.js"></script>
+  <script src="scripts/search.js"></script>
+  <!-- Components -->
+
+  <!-- Bootstrap -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -26,6 +187,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/4e720b23c8.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome Icons -->
 </body>
 
 </html>
